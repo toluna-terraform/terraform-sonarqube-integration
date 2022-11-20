@@ -1,8 +1,3 @@
-locals {
-   rule_list = jsondecode("${var.rule_list}")
-}
-
-
 terraform {
   required_providers {
     sonarqube = {
@@ -41,7 +36,7 @@ resource "sonarqube_qualityprofile" "main" {
 }
 
 resource "sonarqube_rule" "main" {
-  for_each = local.rule_list
+  for_each = var.rule_list
   key = "${var.app_name}-${each.key}"
   markdown_description = "${each.value.markdown_description}"  
   name = "${var.app_name}-${each.key}"
@@ -54,7 +49,7 @@ resource "sonarqube_rule" "main" {
 }
 
 resource "sonarqube_qualityprofile_activate_rule" "main" {
-  for_each = local.rule_list
+  for_each = var.rule_list
   key = sonarqube_qualityprofile.main.key # .id also works
   rule = sonarqube_rule.main[each.key].id
   severity = "${each.value.sevirity}"

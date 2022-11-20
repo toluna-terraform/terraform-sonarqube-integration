@@ -37,7 +37,7 @@ resource "sonarqube_qualityprofile" "main" {
 
 resource "sonarqube_rule" "main" {
   for_each = var.rule_list
-  key = "${var.app_name}-${each.key}"
+  custom_key = "${var.app_name}-${each.key}"
   markdown_description = "${each.value.markdown_description}"  
   name = "${var.app_name}-${each.key}"
   params = "${each.value.params}"

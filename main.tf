@@ -20,7 +20,7 @@ provider "sonarqube" {
 
 resource "sonarqube_project" "main" {
     name       = "${var.app_name}"
-    project    = "${var.app_name}-${var.env_name}"
+    project    = "${var.app_name}"
     visibility = "${var.visibility}" 
 }
 

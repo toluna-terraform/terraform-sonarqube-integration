@@ -10,7 +10,7 @@ terraform {
 provider "sonarqube" {
     user   = "${data.aws_ssm_parameter.sq_username.value}"
     pass   = "${data.aws_ssm_parameter.sq_password.value}"
-    host   = "${data.aws_ssm_parameter.sq_host.value}"
+    host   = "https://${data.aws_ssm_parameter.sq_host.value}"
 }
 
 resource "sonarqube_project" "main" {

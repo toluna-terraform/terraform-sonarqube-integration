@@ -42,9 +42,9 @@ resource "sonarqube_qualityprofile" "main" {
 
 resource "sonarqube_rule" "main" {
   for_each = local.rule_list
-  key = "${each.key}"
+  key = "${var.app_name}-${each.key}"
   markdown_description = "${each.value.markdown_description}"  
-  name = "${each.key}"
+  name = "${var.app_name}-${each.key}"
   params = "${each.value.params}"
   prevent_reactivation = "${each.value.prevent_reactivation}"
   severity = "${each.value.sevirity}"

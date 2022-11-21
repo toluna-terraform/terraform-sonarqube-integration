@@ -28,7 +28,7 @@ variable "rule_list" {
   default = {}
 }
 
-variable "threshold_rule" {
+variable "threshold_list" {
   type    = map(any)
   default = {}
 }

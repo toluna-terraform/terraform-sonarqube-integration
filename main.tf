@@ -56,7 +56,7 @@ resource "sonarqube_qualityprofile_activate_rule" "main" {
 }
 
 resource "sonarqube_qualitygate_condition" "main" {
-    for_each = var.threshold_rule
+    for_each = var.threshold_list
     gatename  = sonarqube_qualitygate.main.id
     metric    = "${each.value.metric}"
     threshold = "${each.value.threshold}"

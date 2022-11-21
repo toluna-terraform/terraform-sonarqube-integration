@@ -54,3 +54,11 @@ resource "sonarqube_qualityprofile_activate_rule" "main" {
   rule = sonarqube_rule.main[each.key].id
   severity = "${each.value.sevirity}"
 }
+
+resource "sonarqube_qualitygate_condition" "main" {
+    for_each = var.threshold_rule
+    gatename  = sonarqube_qualitygate.main.id
+    metric    = "${each.value.metric}"
+    threshold = "${each.value.threshold}"
+    op        = "${each.value.op}"
+}

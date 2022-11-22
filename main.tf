@@ -29,7 +29,7 @@ resource "sonarqube_qualitygate_project_association" "main" {
 }
 
 resource "sonarqube_qualityprofile" "main" {
-    name     = "${var.app_name}_qualitygate_profile"
+    name     = "${var.app_name}_${var.lang}_qualitygate_profile"
     language = "${var.lang}" #  "cs", "css", "flex", "go", "java", "js", "jsp", "kotlin", "php", "py", "ruby", "scala", "ts", "vbnet", "web", "xml"
     is_default = var.is_default_profile
     parent = "sonar way"

@@ -13,22 +13,13 @@ variable "visibility" {
   default     = "public"
 }
 
-variable "lang" {
-  description = " cs, css, flex, go, java, js, jsp, kotlin, php, py,ruby, scala, ts, vbnet, web, xml"
-  default     = "js"
-}
-
-variable "is_default_profile" {
-  type    = bool
-  default = false
-}
-
-variable "rule_list" {
+variable "threshold_list" {
   type    = map(any)
   default = {}
 }
 
-variable "threshold_list" {
+
+variable "profile_list" {
   type    = map(any)
   default = {}
 }

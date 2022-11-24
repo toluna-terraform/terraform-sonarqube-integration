@@ -56,9 +56,6 @@ resource "sonarqube_qualityprofile_project_association" "main" {
   quality_profile = each.key
   project         = sonarqube_project.main.name
   language        = each.value.lang
-  depends_on = [
-    sonarqube_qualitygate_project_association.main
-  ]
 }
 
 resource "sonarqube_qualitygate_condition" "main" {

@@ -1,4 +1,4 @@
-/* terraform {
+terraform {
   required_providers {
     sonarqube = {
       source  = "jdamata/sonarqube"
@@ -12,7 +12,7 @@ provider "sonarqube" {
   pass                     = data.aws_ssm_parameter.sq_password.value
   host                     = "https://${data.aws_ssm_parameter.sq_host.value}"
   tls_insecure_skip_verify = true
-} */
+}
 
 resource "sonarqube_project" "main" {
   name       = var.app_name

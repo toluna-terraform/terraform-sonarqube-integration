@@ -53,7 +53,7 @@ resource "sonarqube_qualitygate_project_association" "main" {
 
 resource "sonarqube_qualityprofile_project_association" "main" {
   for_each        = var.profile_list
-  quality_profile = "Sonar way"
+  quality_profile = each.key
   project         = sonarqube_project.main.name
   language        = each.value.lang
   depends_on = [

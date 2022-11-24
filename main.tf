@@ -51,12 +51,12 @@ resource "sonarqube_qualitygate_project_association" "main" {
   projectkey = sonarqube_project.main.project
 }
 
-/* resource "sonarqube_qualityprofile_project_association" "main" {
+resource "sonarqube_qualityprofile_project_association" "main" {
   for_each        = var.profile_list
   quality_profile = each.key
   project         = sonarqube_project.main.name
   language        = each.value.lang
-} */
+}
 
 resource "sonarqube_qualitygate_condition" "main" {
   for_each  = var.threshold_list

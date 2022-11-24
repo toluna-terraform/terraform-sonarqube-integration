@@ -40,6 +40,7 @@ resource "aws_ssm_parameter" "token" {
   name  = "/infra/${var.app_name}/sq_token"
   type  = "SecureString"
   value = sonarqube_user_token.token.token
+  overwrite = true
 }
 
 resource "sonarqube_qualitygate" "main" {

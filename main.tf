@@ -28,7 +28,7 @@ resource "random_password" "password" {
 resource "sonarqube_user" "user" {
   login_name = "sq-${var.app_name}"
   name       = var.app_name
-  password   = "secret-sauce37!"
+  password   = random_password.password.result
 }
 
 resource "sonarqube_user_token" "token" {

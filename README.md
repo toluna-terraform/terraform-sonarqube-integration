@@ -1,9 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_sonarqube"></a> [sonarqube](#requirement\_sonarqube) | ~>0.15.0 |
+No requirements.
 
 ## Providers
 
@@ -11,7 +9,7 @@
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
-| <a name="provider_sonarqube"></a> [sonarqube](#provider\_sonarqube) | ~>0.15.0 |
+| <a name="provider_sonarqube"></a> [sonarqube](#provider\_sonarqube) | n/a |
 
 ## Modules
 
@@ -23,13 +21,13 @@ No modules.
 |------|------|
 | [aws_ssm_parameter.token](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ssm_parameter) | resource |
 | [random_password.password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
-| [sonarqube_project.main](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/project) | resource |
-| [sonarqube_qualitygate.main](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/qualitygate) | resource |
-| [sonarqube_qualitygate_condition.main](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/qualitygate_condition) | resource |
-| [sonarqube_qualitygate_project_association.main](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/qualitygate_project_association) | resource |
-| [sonarqube_qualityprofile_project_association.main](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/qualityprofile_project_association) | resource |
-| [sonarqube_user.user](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/user) | resource |
-| [sonarqube_user_token.token](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/user_token) | resource |
+| [sonarqube_project.main](https://registry.terraform.io/providers/hashicorp/sonarqube/latest/docs/resources/project) | resource |
+| [sonarqube_qualitygate.main](https://registry.terraform.io/providers/hashicorp/sonarqube/latest/docs/resources/qualitygate) | resource |
+| [sonarqube_qualitygate_condition.main](https://registry.terraform.io/providers/hashicorp/sonarqube/latest/docs/resources/qualitygate_condition) | resource |
+| [sonarqube_qualitygate_project_association.main](https://registry.terraform.io/providers/hashicorp/sonarqube/latest/docs/resources/qualitygate_project_association) | resource |
+| [sonarqube_qualityprofile_project_association.main](https://registry.terraform.io/providers/hashicorp/sonarqube/latest/docs/resources/qualityprofile_project_association) | resource |
+| [sonarqube_user.user](https://registry.terraform.io/providers/hashicorp/sonarqube/latest/docs/resources/user) | resource |
+| [sonarqube_user_token.token](https://registry.terraform.io/providers/hashicorp/sonarqube/latest/docs/resources/user_token) | resource |
 
 ## Inputs
 

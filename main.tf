@@ -1,19 +1,3 @@
-terraform {
-  required_providers {
-    sonarqube = {
-      source  = "jdamata/sonarqube"
-      version = "~>0.15.0"
-    }
-  }
-}
-
-provider "sonarqube" {
-  user                     = data.aws_ssm_parameter.sq_username.value
-  pass                     = data.aws_ssm_parameter.sq_password.value
-  host                     = "https://${data.aws_ssm_parameter.sq_host.value}"
-  tls_insecure_skip_verify = true
-}
-
 resource "sonarqube_project" "main" {
   name       = var.app_name
   project    = var.app_name

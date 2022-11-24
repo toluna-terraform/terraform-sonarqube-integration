@@ -30,9 +30,6 @@ No modules.
 | [sonarqube_qualityprofile_project_association.main](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/qualityprofile_project_association) | resource |
 | [sonarqube_user.user](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/user) | resource |
 | [sonarqube_user_token.token](https://registry.terraform.io/providers/jdamata/sonarqube/latest/docs/resources/user_token) | resource |
-| [aws_ssm_parameter.sq_host](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
-| [aws_ssm_parameter.sq_password](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
-| [aws_ssm_parameter.sq_username](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 
 ## Inputs
 
